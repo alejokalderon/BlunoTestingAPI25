@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.eduideas.helpp.MainActivity">
+
+    <TextView
+        android:id="@+id/serialReveicedText"
+        android:layout_width="132dp"
+        android:layout_height="36dp"
+        android:layout_alignEnd="@+id/serialSendText"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="53dp"
+        android:ems="10"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSerialSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/serialSendText"
+        android:layout_alignRight="@+id/serialSendText"
+        android:layout_marginTop="39dp"
+        android:onClick="serial"
+        android:text="Send Data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serialReveicedText" />
+
+    <TextView
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/serialSendText"
+        android:layout_below="@+id/serialSendText"
+        android:layout_marginTop="42dp"
+        android:ems="10"
+        android:text="Received Data:"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serialSendText" />
+
+    <EditText
+        android:id="@+id/serialSendText"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/buttonScan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp"
+        android:background="#555555"
+        android:bufferType="editable"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Data sending Area"
+        android:textColor="#999999"
+        android:textSize="20dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSerialSend" />
+
+    <Button
+        android:id="@+id/buttonScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/serialSendText"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="34dp"
+        android:onClick="scan"
+        android:text="Scan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+</android.support.constraint.ConstraintLayout>
